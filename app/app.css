@@ -1,15 +1,40 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+:root {
+  --burnt-red: #B22222;
+  --basil-green: #228B22;
+  --soft-cream: #FAF3E0;
+  --wooden-gold: #C49A6C;
+  --snow-white: #FFFFFF;
+  --text-dark: #222222;
 }
 
-html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  background-color: var(--soft-cream);
+  color: var(--text-dark);
+  height: 100vh;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+.next-step-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.next-step-button {
+  background-color: var(--burnt-red);
+  color: var(--snow-white);
+  font-size: 1rem;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.next-step-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
