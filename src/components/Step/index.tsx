@@ -9,17 +9,11 @@ const Step = () => {
 
   const SelectedStep = useMemo(
     () => (
-      <div className="flex flex-col items-center">
-        <img src={logo} alt="Ritovia" className="h-[250px] mb-4" />
-        {steps[selectedStep].title1 && (
-          <h1 className="font-semibold  text-2xl">
-            {steps[selectedStep].title1}
-          </h1>
-        )}
-        <h1 className="font-semibold mb-4 text-2xl">
-          {steps[selectedStep].title2}
-        </h1>
-        <p className="text-xl">{steps[selectedStep].description}</p>
+      <div className="step">
+        <img src={logo} alt="Ritovia" />
+        {steps[selectedStep].title1 && <h1>{steps[selectedStep].title1}</h1>}
+        <h1 className="mb-4">{steps[selectedStep].title2}</h1>
+        <p>{steps[selectedStep].description}</p>
       </div>
     ),
     [selectedStep]
@@ -31,7 +25,7 @@ const Step = () => {
   };
 
   return (
-    <div className="next-step-container h-screen">
+    <div className="next-step-container">
       {SelectedStep}
       {selectedStep !== 5 && (
         <button onClick={nextStep} className="next-step-button">

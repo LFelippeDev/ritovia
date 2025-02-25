@@ -9,10 +9,49 @@
   --text-dark: #222222;
 }
 
+#root {
+  height: 100%;
+}
+
 body {
   background-color: var(--soft-cream);
   color: var(--text-dark);
   height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.step>img {
+  height: 250px;
+  margin-bottom: 16px;
+}
+
+.step>h1 {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.step>p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .next-step-container {
@@ -21,6 +60,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  height: 100%;
 }
 
 .next-step-button {
