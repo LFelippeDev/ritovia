@@ -32,7 +32,7 @@ const Step = () => {
           Próximo capítulo
         </button>
       )}
-      <audio ref={audioRef} src={song} autoPlay />
+      <audio ref={audioRef} src={song} />
     </div>
   );
 };
